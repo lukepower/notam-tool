@@ -1,0 +1,297 @@
+.notam-map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notam-map {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  z-index: 1;
+}
+
+/* Legend overlay */
+.map-legend {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  max-width: 200px;
+}
+
+.legend-title {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid;
+}
+
+.now-close-dot {
+  background: #f57c00;
+  border-color: #ff5722;
+}
+
+.resurfaced-dot {
+  background: #fbc02d;
+  border-color: #2196f3;
+  border-style: dashed;
+}
+
+.attention-dot {
+  background: #ff9800;
+  border-color: #ff9800;
+}
+
+.read-dot {
+  background: #bdbdbd;
+  border-color: #9e9e9e;
+}
+
+.unread-dot {
+  background: #757575;
+  border-color: #757575;
+}
+
+.legend-line {
+  width: 20px;
+  height: 3px;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
+.route-line {
+  background: #1565c0;
+}
+
+.corridor-line {
+  background: #90caf9;
+  height: 8px;
+  opacity: 0.5;
+  border-radius: 4px;
+}
+
+/* Waypoint icon labels */
+.waypoint-icon {
+  background: none !important;
+  border: none !important;
+}
+
+.waypoint-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.waypoint-label.dep {
+  background: #4caf50;
+  color: white;
+}
+
+.waypoint-label.arr {
+  background: #d32f2f;
+  color: white;
+}
+
+.waypoint-label.wp {
+  background: #1565c0;
+  color: white;
+}
+
+/* Popup styling */
+.notam-popup .leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.notam-popup .leaflet-popup-content {
+  margin: 0;
+  width: 280px !important;
+}
+
+.popup-content {
+  padding: 14px;
+}
+
+.popup-header {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.popup-severity {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.popup-status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.status-now-close {
+  background: #ff5722;
+  color: white;
+}
+
+.status-resurfaced {
+  background: #2196f3;
+  color: white;
+}
+
+.status-attention {
+  background: #ff9800;
+  color: white;
+}
+
+.status-read {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.status-unread {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #1a1a1a;
+}
+
+.popup-desc {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.popup-details {
+  font-size: 12px;
+  color: #444;
+}
+
+.popup-detail {
+  margin-bottom: 3px;
+}
+
+.popup-detail strong {
+  color: #333;
+}
+
+.popup-warning {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: #fff3e0;
+  border-left: 3px solid #ff5722;
+  border-radius: 0 4px 4px 0;
+  font-size: 11px;
+  color: #bf360c;
+  line-height: 1.3;
+}
+
+.popup-info {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: #e3f2fd;
+  border-left: 3px solid #2196f3;
+  border-radius: 0 4px 4px 0;
+  font-size: 11px;
+  color: #0d47a1;
+  line-height: 1.3;
+}
+
+.popup-read-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup-read-btn:hover {
+  background: #1976d2;
+}
+
+/* Pulse animation for highlighted markers (CSS only, applied via class) */
+@keyframes pulse-ring-anim {
+  0%, 100% {
+    opacity: 0.5;
+    stroke-width: 2;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 4;
+  }
+}
+
+.pulse-ring path {
+  animation: pulse-ring-anim 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .map-legend {
+    top: auto;
+    bottom: 12px;
+    right: 12px;
+    max-width: 180px;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .notam-map {
+    min-height: 350px;
+  }
+}

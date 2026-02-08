@@ -1,0 +1,77 @@
+.flight-selector {
+  background: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.flight-controls {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.flight-select {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.flight-select:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.new-flight-btn {
+  padding: 10px 16px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.new-flight-btn:hover {
+  background: #43a047;
+}
+
+.new-flight-btn:active {
+  background: #388e3c;
+  transform: scale(0.98);
+}
+
+@media (min-width: 768px) {
+  .flight-selector {
+    padding: 16px 20px;
+  }
+
+  .flight-label {
+    font-size: 15px;
+  }
+
+  .flight-select,
+  .new-flight-btn {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+}
