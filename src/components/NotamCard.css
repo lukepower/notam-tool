@@ -1,0 +1,157 @@
+.notam-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-left: 6px solid #757575;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.notam-card.highlight {
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.6);
+  }
+}
+
+.notam-card.read {
+  opacity: 0.85;
+}
+
+.notam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.notam-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.notam-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-warning {
+  background: #ff9800;
+  color: white;
+}
+
+.badge-info {
+  background: #2196f3;
+  color: white;
+}
+
+.badge-read {
+  background: #4caf50;
+  color: white;
+}
+
+.badge-severity {
+  color: white;
+}
+
+.notam-description {
+  font-size: 16px;
+  color: #444;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.notam-details {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.detail-value {
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+.mark-read-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mark-read-btn:hover {
+  background: #1976d2;
+}
+
+.mark-read-btn:active {
+  background: #1565c0;
+  transform: scale(0.98);
+}
+
+/* iPad optimizations */
+@media (min-width: 768px) {
+  .notam-card {
+    padding: 24px;
+  }
+
+  .notam-title {
+    font-size: 22px;
+  }
+
+  .notam-description {
+    font-size: 17px;
+  }
+
+  .mark-read-btn {
+    padding: 16px;
+    font-size: 17px;
+  }
+}

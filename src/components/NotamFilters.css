@@ -1,0 +1,71 @@
+.notam-filters {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  background: #f5f5f5;
+  color: #666;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filter-btn.active {
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.filter-btn:hover {
+  background: #e3f2fd;
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.filter-btn.active:hover {
+  background: #1976d2;
+  border-color: #1976d2;
+  color: white;
+}
+
+.filter-btn:active {
+  transform: scale(0.96);
+}
+
+/* iPad optimizations */
+@media (min-width: 768px) {
+  .notam-filters {
+    padding: 20px;
+  }
+
+  .filters-title {
+    font-size: 17px;
+  }
+
+  .filter-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
